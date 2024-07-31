@@ -1,0 +1,305 @@
+@font-face {
+    font-family: 'Helvetica';
+    src: url(HelveticaforTarget-Bold.ttf);
+}
+
+@font-face {
+    font-family: 'ballega';
+    src: url(Cocogoose-Pro-Semilight-trial.ttf);
+}
+
+@font-face {
+    font-family: 'Agricola';
+    src: url(QOAgricola-Rough.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-padding-top: 2rem;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: rgb(231, 231, 231);
+}
+
+nav {
+    width: 100%;
+    height: 8vh;
+    background: white;
+    position: fixed;
+    z-index: 10;
+    margin-top: -2rem;
+}
+
+.logo {
+    display: flex;
+    height: 75px;
+    justify-content: center;
+}
+
+.slide{
+    height: 100%;
+    width: 300px;
+    position: fixed;
+    background-color: rgb(255, 255, 255);
+    transition: 0.5s ease;
+    transform: translateX(-300px);
+    top: 73px;
+    z-index: 11;
+}
+
+.slide ul li {
+    list-style: none;
+}
+
+.slide ul li a{
+    color: rgb(4, 44, 19);
+    margin-left: 15px;
+    font-weight: 300;
+    padding: 20px 0;
+    display: block;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-family: ballega;
+    transition: 0.5s;
+    z-index: 12;
+}
+
+.slide ul li a:hover{
+    transform: translateX(10px);
+}
+
+input {
+    display: none;
+    visibility: hidden;
+    -webkit-appearance: none;
+}
+
+.toggle {
+    position: fixed;
+    height: 30px;
+    width: 30px;
+    top: 20px;
+    left: 20px;
+    z-index: 1;
+    cursor: pointer;
+    border-radius: 2px;
+    z-index: 11;
+}
+
+.toggle .commom {
+    position: absolute;
+    height: 2px;
+    width: 20px;
+    background-color: rgb(4, 44, 19);
+    border-radius: 50px;
+    transition: 0.3s ease;
+}
+
+.toggle .top_line{
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.toggle .middle_line{
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.toggle .bottom_line{
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.toggle .h1 {
+    color: rgb(4, 44, 19);
+    font-family: Helvetica;
+    font-weight: 800;
+    text-align: right;
+    padding: 10px 0;
+    padding-right: 30px;
+    transform: translate(30px, -5px);
+}
+
+
+input:checked ~ .toggle .top_line{
+    left: 2px;
+    top: 14px;
+    width: 25px;
+    transform: rotate(45deg);
+}
+
+input:checked ~ .toggle .bottom_line{
+    left: 2px;
+    top: 14px;
+    width: 25px;
+    transform: rotate(-45deg);
+}
+
+input:checked ~ .toggle .middle_line{
+    opacity: 0%;
+    transform: translateX(20px);
+}
+
+input:checked ~ .slide{
+    transform: translateX(0);
+}
+
+section {
+    padding: 2rem 20%;
+}
+
+.titulocursos {
+    font-size: 1.5rem;
+    font-weight: 600;
+    font-family: ballega;
+    text-align: center;
+    margin: 1.8rem;
+}
+
+.cursos {
+    margin-top: 2rem;
+}
+
+.conteudo {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, auto));
+    gap: 1.5rem;
+    transform: translateY(-15px);
+}
+
+.box {
+    position: relative;
+    background-color: rgb(202, 202, 202);
+    padding: 10px;
+    border-radius: 10px;
+    transition: 0.25s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.curso-img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 0.5rem;
+}
+
+.botao {
+    display: flex;
+    margin-top: auto;
+    justify-content: center;
+    border: 1px solid rgb(24, 153, 24);;
+    border-radius: 10px;
+    background-color: rgb(24, 153, 24);
+    color: white;
+    padding: .4rem 1rem;
+    cursor: pointer;
+    font-size: 0.7rem;
+    font-family: ballega;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: 0.25s;
+}
+
+.botao:hover{
+    background-color: white;
+    color: rgb(24, 153, 24);
+}
+
+footer {
+    width: 100%;
+    background: white;
+}
+.footercontats{
+    color: black;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 1rem 1.5rem;
+    margin: 0;
+
+}
+
+.footercontats h1 {
+    margin-bottom: 0.75rem;
+    font-family: Agricola;
+    text-transform: uppercase;
+}
+
+.footerlist{
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+    list-style: none;
+}
+
+.footerlist .footerlink{
+    color: rgb(11, 68, 15);
+    text-decoration: none;
+    font-family: Helvetica;
+    transition: 0.25s;
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 10px;
+}
+
+.footerlist .footerlink:hover{
+    border: 1px solid black;
+    border-radius: 2.5px;
+}
+
+.footerlist h3{
+    font-family: Helvetica;
+    text-transform: uppercase;
+}
+
+.servicoemail{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.servicoemail h3{
+    font-family: Helvetica;
+    text-transform: uppercase;
+}
+
+.servicoemail p{
+    font-family: Helvetica;
+}
+
+
+.inputgroup{
+    display: flex;
+    align-items: center;
+    background-color: rgb(219, 219, 219);
+    width: 45%;
+}
+
+.inputgroup input{
+    all: unset;
+    padding: 0;
+    width: 100%;
+}
+
+.inputgroupbutton button{
+    border: none;
+    padding: 0.5rem;
+    font-family: sans-serif;
+    height: 100%;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.inputgroupbutton button:hover{
+    background-color: rgb(201, 201, 201);
+}
+
+.footercopyright{
+    display: flex;
+    justify-content: center;
+    font-family: sans-serif;
+    padding: 0.5rem;
+}

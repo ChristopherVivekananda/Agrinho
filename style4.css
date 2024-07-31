@@ -1,0 +1,247 @@
+@font-face {
+    font-family: 'Helvetica';
+    src: url(HelveticaforTarget-Bold.ttf);
+}
+
+@font-face {
+    font-family: 'ballega';
+    src: url(Cocogoose-Pro-Semilight-trial.ttf);
+}
+
+@font-face {
+    font-family: 'Agricola';
+    src: url(QOAgricola-Rough.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(231, 231, 231);
+}
+
+section {
+    padding: 2rem 9%;
+}
+
+nav {
+    width: 100%;
+    height: 8vh;
+    background: white;
+    position: fixed;
+    z-index: 10;
+}
+
+.logo {
+    display: flex;
+    height: 75px;
+    justify-content: center;
+}
+
+.slide{
+    height: 100%;
+    width: 300px;
+    position: fixed;
+    background-color: rgb(255, 255, 255);
+    transition: 0.5s ease;
+    transform: translateX(-300px);
+    top: 73px;
+    z-index: 11;
+}
+
+.slide ul li {
+    list-style: none;
+}
+
+.slide ul li a{
+    color: rgb(4, 44, 19);
+    margin-left: 15px;
+    font-weight: 300;
+    padding: 20px 0;
+    display: block;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-family: ballega;
+    transition: 0.5s;
+    z-index: 12;
+}
+
+.slide ul li a:hover{
+    transform: translateX(10px);
+}
+
+input {
+    display: none;
+    visibility: hidden;
+    -webkit-appearance: none;
+}
+
+.toggle {
+    position: fixed;
+    height: 30px;
+    width: 30px;
+    top: 20px;
+    left: 20px;
+    z-index: 1;
+    cursor: pointer;
+    border-radius: 2px;
+    z-index: 11;
+}
+
+.toggle .commom {
+    position: absolute;
+    height: 2px;
+    width: 20px;
+    background-color: rgb(4, 44, 19);
+    border-radius: 50px;
+    transition: 0.3s ease;
+}
+
+.toggle .top_line{
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.toggle .middle_line{
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.toggle .bottom_line{
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.toggle .h1 {
+    color: rgb(4, 44, 19);
+    font-family: Helvetica;
+    font-weight: 800;
+    text-align: right;
+    padding: 10px 0;
+    padding-right: 30px;
+    transform: translate(30px, -5px);
+}
+
+
+input:checked ~ .toggle .top_line{
+    left: 2px;
+    top: 14px;
+    width: 25px;
+    transform: rotate(45deg);
+}
+
+input:checked ~ .toggle .bottom_line{
+    left: 2px;
+    top: 14px;
+    width: 25px;
+    transform: rotate(-45deg);
+}
+
+input:checked ~ .toggle .middle_line{
+    opacity: 0%;
+    transform: translateX(20px);
+}
+
+input:checked ~ .slide{
+    transform: translateX(0);
+}
+
+.botao {
+    display: flex;
+    margin-top: auto;
+    justify-content: center;
+    border: 1px solid rgb(24, 153, 24);;
+    border-radius: 5rem;
+    background-color: rgb(24, 153, 24);
+    color: white;
+    padding: .6rem 1.5rem;
+    cursor: pointer;
+    font-size: 0.7rem;
+    font-family: ballega;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: 0.25s;
+}
+
+.body{
+    height: 96vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.livro {
+    position: relative;
+    width: 525px;
+    height: 750px;
+    transform: translateY(35px);
+}
+
+.p1{
+    position: absolute;
+    font-family: Arial, Helvetica, sans-serif;
+    height: 60vh;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    left: 0;
+}
+
+.costas{
+    background-color: white;
+    position: absolute;
+    width: 525px;
+    height: 750px;
+    top: 0;
+    left: 0;
+}
+
+.topicos{
+    transform: translateY(20px);
+}
+.paragrafo{
+    transform: translateY(10px);
+}
+.topicos1{
+    transform: translateY(40px);
+}
+
+.topicos2{
+    transform: translateY(60px);
+}
+
+.topicos3{
+    transform: translateY(20px);
+}
+
+.fimpara{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 4rem;
+    transform: translateY(50px);
+}
+
+.botaolivro{
+    z-index: 10;
+}
+
+.botaolivro1{
+    z-index: 10;
+}
+footer {
+    width: 100%;
+    background: white;
+}
+
+.footercopyright{
+    display: flex;
+    justify-content: center;
+    font-family: sans-serif;
+    padding: 0.5rem;
+}

@@ -1,0 +1,62 @@
+@font-face {
+    font-family: 'Helvetica';
+    src: url(HelveticaforTarget-Bold.ttf);
+}
+
+@font-face {
+    font-family: 'ballega';
+    src: url(Cocogoose-Pro-Semilight-trial.ttf);
+}
+
+@font-face {
+    font-family: 'Agricola';
+    src: url(QOAgricola-Rough.ttf);
+}
+
+@font-face {
+    font-family: 'Heading';
+    src: url(Heading-Pro-Bold-trial.ttf);
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(231, 231, 231);
+}
+
+.Voltar .botao {
+    display: flex;
+    margin-top: auto;
+    justify-content: center;
+    border: 1px solid rgb(24, 153, 24);;
+    border-radius: 10px;
+    background-color: rgb(24, 153, 24);
+    color: white;
+    padding: .6rem 1rem;
+    cursor: pointer;
+    font-size: 0.7rem;
+    font-family: ballega;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: 0.25s;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.botao:hover{
+    background-color: white;
+    color: rgb(24, 153, 24);
+}
+
+.texto {
+    text-align: left;
+    font-size: 2rem;
+    font-family: Heading;
+    margin-top: 10px;
+    transform: translateY(40px);
+}
